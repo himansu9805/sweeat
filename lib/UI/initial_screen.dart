@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:order_app/UI/login.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -48,24 +49,38 @@ class _InitialScreenState extends State<StatefulWidget> {
                           ],
                         ),
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      child: Stack(
+                        alignment: Alignment.center,
                         children: [
-                          Text(
-                            "Hey there! Welcome to",
-                            style: TextStyle(
-                              fontFamily: 'SF Pro Display',
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          SvgPicture.asset(
+                            'assets/vectors/cookie_love.svg',
                           ),
-                          Text(
-                            "Sweeat!",
-                            style: TextStyle(
-                              fontFamily: 'AF Yours',
-                              fontSize: 100,
-                              fontWeight: FontWeight.bold,
-                              foreground: Paint()..shader = linearGradient,
+                          Container(
+                            decoration: BoxDecoration(color: Colors.black12),
+                            alignment: Alignment.center,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Hey there! Welcome to",
+                                  style: TextStyle(
+                                    fontFamily: 'SF Pro Display',
+                                    fontSize: 30,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Sweeat!",
+                                  style: TextStyle(
+                                    fontFamily: 'AF Yours',
+                                    fontSize: 100,
+                                    fontWeight: FontWeight.bold,
+                                    foreground: Paint()
+                                      ..shader = linearGradient,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
