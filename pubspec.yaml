@@ -60,6 +60,8 @@ flutter:
 
   assets:
     - assets/images/lollipop.png
+    - assets/vectors/cookie_love.svg
+    - assets/vectors/login.svg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
