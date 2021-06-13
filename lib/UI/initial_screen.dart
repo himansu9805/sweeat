@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:order_app/UI/login.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -50,17 +49,8 @@ class _InitialScreenState extends State<StatefulWidget> {
                           ],
                         ),
                       ),
-<<<<<<< HEAD
                       child: Stack(
-||||||| 237d009
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-=======
-                      child: Stack(
-                        alignment: Alignment.center,
->>>>>>> 7e488c606cdba3fe8d562d43d43cb4e2cd6615a6
                         children: [
-<<<<<<< HEAD
                           SvgPicture.asset('assets/vectors/cookie_love.svg'),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -83,55 +73,6 @@ class _InitialScreenState extends State<StatefulWidget> {
                                 ),
                               ),
                             ],
-||||||| 237d009
-                          Text(
-                            "Hey there! Welcome to",
-                            style: TextStyle(
-                              fontFamily: 'SF Pro Display',
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            "Sweeat!",
-                            style: TextStyle(
-                              fontFamily: 'AF Yours',
-                              fontSize: 100,
-                              fontWeight: FontWeight.bold,
-                              foreground: Paint()..shader = linearGradient,
-                            ),
-=======
-                          SvgPicture.asset(
-                            'assets/vectors/cookie_love.svg',
-                          ),
-                          Container(
-                            decoration: BoxDecoration(color: Colors.black12),
-                            alignment: Alignment.center,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "Hey there! Welcome to",
-                                  style: TextStyle(
-                                    fontFamily: 'SF Pro Display',
-                                    fontSize: 30,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Sweeat!",
-                                  style: TextStyle(
-                                    fontFamily: 'AF Yours',
-                                    fontSize: 100,
-                                    fontWeight: FontWeight.bold,
-                                    foreground: Paint()
-                                      ..shader = linearGradient,
-                                  ),
-                                ),
-                              ],
-                            ),
->>>>>>> 7e488c606cdba3fe8d562d43d43cb4e2cd6615a6
                           ),
                         ],
                       ),
