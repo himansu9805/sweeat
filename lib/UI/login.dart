@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Login extends StatefulWidget {
   Login({Key key}) : super(key: key);
@@ -35,8 +36,8 @@ class _LoginState extends State<Login> {
                 child: Column(
                   children: [
                     Container(
-                      padding: EdgeInsets.symmetric(
-                          vertical: 20.0, horizontal: 15.0),
+                      padding:
+                          EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
                       child: Row(
                         children: [
                           IconButton(
@@ -51,45 +52,49 @@ class _LoginState extends State<Login> {
                         ],
                       ),
                     ),
-                    Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: deviceHeight / 4,
-                            width: deviceWidth,
-                            padding: EdgeInsets.symmetric(horizontal: 25.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "Login to your",
-                                  style: TextStyle(
-                                    fontFamily: 'SF Pro Display',
-                                    fontSize: 40.0,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                Text(
-                                  "ACCOUNT",
-                                  style: TextStyle(
-                                    fontFamily: 'SF Pro Display',
-                                    fontSize: 60,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              ],
-                            ),
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          'assets/vectors/login.svg',
+                          height: 225,
+                        ),
+                        Container(
+                          width: deviceWidth * 0.9,
+                          decoration: BoxDecoration(
+                            color: Colors.white38,
+                            borderRadius: BorderRadius.circular(30),
                           ),
-                        ],
-                      ),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20.0, vertical: 15.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Login to your",
+                                style: TextStyle(
+                                  fontFamily: 'SF Pro Display',
+                                  fontSize: 40.0,
+                                ),
+                              ),
+                              Text(
+                                "ACCOUNT",
+                                style: TextStyle(
+                                  fontFamily: 'SF Pro Display',
+                                  fontSize: 60,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 25.0),
+                padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 50.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -109,7 +114,7 @@ class _LoginState extends State<Login> {
                           filled: true,
                           fillColor: Colors.black26,
                           focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.white),
+                            borderSide: BorderSide(color: Color(0xff5f4bfc)),
                             borderRadius: BorderRadius.circular(20),
                           ),
                         ),
@@ -132,8 +137,25 @@ class _LoginState extends State<Login> {
                           filled: true,
                           fillColor: Colors.black26,
                           focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.white),
+                            borderSide: BorderSide(color: Color(0xff5f4bfc)),
                             borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(right: 10.0),
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          "Forgot your password",
+                          style: TextStyle(
+                            fontFamily: 'SF Pro Display',
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
@@ -141,27 +163,62 @@ class _LoginState extends State<Login> {
                   ],
                 ),
               ),
-              SizedBox(height: 35.0),
-              Container(
-                height: 45,
-                width: deviceWidth * 0.7,
-                child: MaterialButton(
-                  onPressed: () {},
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  elevation: 5,
-                  color: Color(0xff5f4bfc),
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                      fontFamily: 'SF Pro Display',
-                      fontSize: 20,
-                      color: Colors.white,
+              Column(
+                children: [
+                  Container(
+                    height: 45,
+                    width: deviceWidth * 0.7,
+                    child: MaterialButton(
+                      onPressed: () {},
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      elevation: 5,
+                      color: Color(0xff5f4bfc),
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                          fontFamily: 'SF Pro Display',
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
+                  SizedBox(height: 40.0),
+                  Container(
+                    child: Text(
+                      "Don't have an account?",
+                      style: TextStyle(
+                        fontFamily: 'SF Pro Display',
+                        fontSize: 17.5,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+                  Container(
+                    height: 45,
+                    width: deviceWidth * 0.7,
+                    child: MaterialButton(
+                      onPressed: () {},
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      elevation: 5,
+                      color: Colors.white,
+                      child: Text(
+                        "Sign up",
+                        style: TextStyle(
+                          fontFamily: 'SF Pro Display',
+                          fontSize: 20,
+                          color: Color(0xff5f4bfc),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
